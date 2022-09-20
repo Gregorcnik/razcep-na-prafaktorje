@@ -1,6 +1,6 @@
 # Spletna stran za razcep števil na prafaktorje
 
-**V NASTAJANJU 🙄**
+**PRVA VERZIJA 🙄**
 
 Enostavna spletna stran za razcep manjših števil na prafaktorje števil na prafaktorje.
 
