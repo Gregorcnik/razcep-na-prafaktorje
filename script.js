@@ -2,8 +2,8 @@ function valid() {
   // Get the value of the input field with id="numb"
   let x = document.getElementById("numb").value;
   // If x is Not a Number or less than one or greater than 10
-  if (isNaN(x) || x < 4 || x > 10000) {
-    document.getElementById("invalidMassage").innerHTML = "Število mora biti med 4 in 10000!";
+  if (isNaN(x) || x < 4 || x > 1000000) {
+    document.getElementById("invalidMassage").innerHTML = "Število mora biti med 4 in 1000000!";
     return false;
   } else {
     document.getElementById("invalidMassage").innerHTML = "";
