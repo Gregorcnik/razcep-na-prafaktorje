@@ -1,3 +1,5 @@
+nastaviBottomLine()
+
 function valid() {
   // Get the value of the input field with id="numb"
   let x = document.getElementById("numb").value;
@@ -56,4 +58,26 @@ function prastevila(n) {
     if (sito[i] != -1) {ret.push(i);}
   }
   return ret;
+}
+
+function nastaviBottomLine() {
+  document.getElementById("bottomLine").style.margin = "0";
+
+  var body = document.body;
+  var html = document.documentElement;
+  var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+  var bodyHeight = Math.min( body.scrollHeight, body.offsetHeight);
+
+  document.getElementById("bottomLine").style.margin = (height-bodyHeight+20) + "px 0 0 0";
+}
+
+function copyToClipboard(copyText) {
+  if (copyText == "" || typeof(copyText) != "string") {
+    alert("There is nothing to copy!")
+  }
+  navigator.clipboard.writeText(copyText).then(() => {
+      // Alert the user that the action took place.
+      // Nobody likes hidden stuff being done under the hood!
+      alert("Copied to clipboard");
+  });
 }
