@@ -4,6 +4,12 @@ function valid() {
   // Get the value of the input field with id="numb"
   let x = document.getElementById("numb").value;
   // If x is Not a Number or less than one or greater than 10
+  if (x == "teman način") {
+    darkMode();
+    document.getElementById("numb").value = "";
+    document.getElementById("invalidMassage").innerHTML = "";
+    return false;
+  }
   if (isNaN(x) || x < 4 || x > 1000000) {
     document.getElementById("invalidMassage").innerHTML = "Število mora biti med 4 in 1000000!";
     return false;
@@ -11,6 +17,24 @@ function valid() {
     document.getElementById("invalidMassage").innerHTML = "";
     return true;
   }
+}
+
+function darkMode() {
+  let textColor = "#15ff38";
+  let backgroundColor = "black";
+  document.getElementById("body").style.background = backgroundColor;
+  document.getElementById("body").style.color = textColor;
+  document.getElementById("submit").style.background = backgroundColor;
+  document.getElementById("submit").style.color = textColor;
+  document.getElementById("submit").style.borderColor = textColor;
+  document.getElementById("numb").style.background = backgroundColor;
+  document.getElementById("numb").style.color = textColor;
+  document.getElementById("numb").style.borderColor = textColor;
+  document.getElementById("numb").classList.add("dark");
+  document.getElementById("vertical-rule").style.borderColor = textColor;
+  document.getElementById("postopek").style.userSelect = "text";
+  document.getElementById("rezultat").style.userSelect = "text";
+  document.getElementById("invalidMassage").style.color = textColor;
 }
 
 function razcepi() {
