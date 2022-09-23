@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="si">
+  <head>
+    <meta charset="utf-8">
+    <title>Razcep Na Prafaktorje</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body id="body" onresize="nastaviBottomLine()">
+    <h1>Razcep Na Prafaktorje</h1>
+    <p>Spletna stran za razcepljanje števil na prafaktorje.</p>
+
+    <input id="numb" placeholder="Vnesi številko med 4 in 1.000.000">
+    <button type="button" onclick="if(valid()) {razcepi(); nastaviBottomLine();}" class="submit" id = "submit">Izračunaj</button>
+    <small id="invalidMassage"></small>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-6">
+          <div id="postopek">
+            <p id="stevilke"></p>
+            <div id="vertical-rule"></div>
+            <p id="delitelji"></p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <p id="rezultat"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="bottomLine">
+      <hr>
+      <p> naredil: Gregor Potočnik | prva izdaja: 20.9.22 </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
