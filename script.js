@@ -32,8 +32,6 @@ function darkMode() {
   document.getElementById("numb").style.borderColor = textColor;
   document.getElementById("numb").classList.add("dark");
   document.getElementById("vertical-rule").style.borderColor = textColor;
-  document.getElementById("postopek").style.userSelect = "text";
-  document.getElementById("rezultat").style.userSelect = "text";
   document.getElementById("invalidMassage").style.color = textColor;
 }
 
